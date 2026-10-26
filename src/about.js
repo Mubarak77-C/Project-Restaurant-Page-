@@ -1,20 +1,30 @@
-export default function loadAbout(){
-    const loadDiv=document.createElement('div');
-    loadDiv.classList.add('About-content')
+export default function loadAbout() {
+    const loadDiv = document.createElement('div');
+    loadDiv.classList.add('about-content'); // Tip: lowercase class names match CSS conventions better
 
     const headline = document.createElement('h2');
-    headline.textContent="0123456789";
+    headline.textContent = "Contact & Location";
 
-    //p address fpr
-    const paragraph = document.createElement('p');
-    paragraph.textContent="xyz Block 01 callifornia street town city";
+    // Phone number paragraph
+    const phoneP = document.createElement('p');
+    phoneP.textContent = "📞 Phone: (555) 123-4567";
 
-    const location=document.createElement('a');
-    location.textContent="location";
+    // Address paragraph
+    const addressP = document.createElement('p');
+    addressP.textContent = "📍 Address: 123 California Street, Town City";
 
+    // Map location link
+    const locationLink = document.createElement('a');
+    locationLink.textContent = "Open in Google Maps";
+    locationLink.href = "https://maps.google.com";
+    locationLink.target = "_blank"; // Opens in a new tab
+    locationLink.classList.add('map-link');
+
+    // Append everything to the container
     loadDiv.appendChild(headline);
-    loadDiv.appendChild(paragraph);
-    loadDiv.appendChild(location);
+    loadDiv.appendChild(phoneP);
+    loadDiv.appendChild(addressP);
+    loadDiv.appendChild(locationLink);
 
     return loadDiv;
 }
