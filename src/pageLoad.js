@@ -6,10 +6,12 @@ export default function loadPage() {
 
     const homeButton=document.querySelector('button')
     homeButton.textContent='Home';
+    homeButton.id = 'home-btn'; // <--- Make sure this ID exists
     homeButton.classList.add('nav-btn');
 
     const menuButton= document.createElement('button');
     menuButton.textContent='Menu';
+    menuButton.id = 'menu-btn'; // <--- Mandatory!
     menuButton.classList.add('nav-btn');
 
     nav.appendChild(homeButton);
