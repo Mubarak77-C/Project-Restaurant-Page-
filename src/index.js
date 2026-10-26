@@ -1,5 +1,5 @@
 //console.log('wbpack connected');
-//import './style.css';
+import './style.css';
 import loadPage from './pageLoad.js';
 import loadHome from './home.js';
 import loadMenu from './menu.js';
